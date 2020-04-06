@@ -18,8 +18,17 @@
 */
 
 const { Ignitor } = require('@adonisjs/ignitor')
+const mongoose = require("mongoose");
 
 new Ignitor(require('@adonisjs/fold'))
   .appRoot(__dirname)
   .fireHttpServer()
   .catch(console.error)
+
+let mongoURL = "mongodb://127.0.0.1:27017/data";
+
+mongoose.connect(mongoURL).then(() => {
+  console.log("mongodb connect");
+}).catch((err) => {
+  console.log(err);
+})

@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "dev": "adonis serve --dev",
     "test": "node ace test"
   },
   "keywords": [
@@ -17,9 +18,13 @@
   "private": true,
   "dependencies": {
     "@adonisjs/ace": "^5.0.8",
+    "@adonisjs/bodyparser": "^2.0.9",
+    "@adonisjs/cors": "^1.0.7",
     "@adonisjs/fold": "^4.0.9",
     "@adonisjs/framework": "^5.0.9",
-    "@adonisjs/ignitor": "^2.0.8"
+    "@adonisjs/ignitor": "^2.0.8",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.7"
   },
   "autoload": {
     "App": "./app"
