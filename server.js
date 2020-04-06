@@ -25,7 +25,8 @@ new Ignitor(require('@adonisjs/fold'))
   .fireHttpServer()
   .catch(console.error)
 
-let mongoURL = "mongodb://127.0.0.1:27017/data";
+// let mongoURL = "mongodb://127.0.0.1:27017/data";
+let mongoURL = "mongodb+srv://user:123456abc@cluster-app-zaajg.mongodb.net/app?retryWrites=true&w=majority"
 
 mongoose.connect(mongoURL).then(() => {
   console.log("mongodb connect");
